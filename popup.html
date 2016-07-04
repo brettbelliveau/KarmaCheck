@@ -1,26 +1,19 @@
 <!doctype html>
+<!--
+- Author: Brett Belliveau
+- Description: HTML source for popup window
+- Date: 7/3/2016
+-->
 
 <html>
   <head>
     <title>Karma Check Popup</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-      }
-      #status {
-        white-space: pre;
-        text-overflow: ellipsis;
-        text-align: center;
-        overflow: hidden;
-        min-width: 200px;
-      }
-    </style>
+    <link href="css/style.css" rel="stylesheet">    
     <script src="js/popup.js"></script>
   </head>
   <body>
-    <div id="status">Test Popup Text</div>
-    <img id="image-result" hidden>
+    <div id="status"></div>
+    <div id="results"></div>
   </body>
 </html>
 
