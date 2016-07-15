@@ -26,11 +26,13 @@ function hideElement(elementId) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  getCurrentUrl(function(url) {
-    renderStatus('Performing Karma Decay search...');
-    //Handle KarmaDecay search given url
-    window.alert(url);
-    hideElement('status')
-    //Show results
-  });
+    getCurrentUrl(function(myUrl) {
+        renderStatus('Performing Karma Decay Search ' + myUrl);
+         
+        jQuery.get(myUrl, function(res) {
+            renderStatus('It worked!');
+        });
+        
+        //renderStatus('Post-test');
+    });
 });
